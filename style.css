@@ -81,6 +81,28 @@ p{
 .phar{
   font-size: 16px;
 }
+.step{
+  display: none;
+}
+.step-1{
+  display: block;
+}
+.main{
+  min-height: calc(100vh - 72px);
+  display: grid;
+  place-items: center;
+}
+.card{
+  display: flex;
+}
+.side-nav{
+  width: 274px;
+  height: 568px;
+  background-image: url(assets/images/bg-sidebar-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
 /* Extra large devices (large desktops, 1200px and up) */
 @media (width < 1200px) {}
 
