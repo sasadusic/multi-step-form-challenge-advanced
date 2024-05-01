@@ -184,7 +184,17 @@ p{
   border: 1px solid var(--Marine-blue);
 }
 .btn{
-  
+  border: none;
+  outline-color: transparent;
+  font-size: 16px;
+  padding: 12px 18px;
+  width: max-content;
+  border-radius: 4px;
+}
+.next{
+  background: var(--Marine-blue);
+  margin-left: auto;
+  color: var(--Alabaster);
 }
 /* Step */
 /* Extra large devices (large desktops, 1200px and up) */
