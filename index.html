@@ -19,29 +19,40 @@
 
     <!-- Sidebar start -->
     <nav class="side-nav">
-      <div class="side-step">
+      <div class="side-step side-step-active">
         <div class="num">1</div>
-         
-        <div class="side-step-phar">Step 1</div>
-        <h2 class="side-sub-header">Your info</h2>
+         <div class="step-info">
+
+           <div class="side-step-phar">Step 1</div>
+           <h2 class="side-sub-header">Your info</h2>
+          </div>
       </div>
   
   <div class="side-step">
     <div class="num">1</div>
-    <div class="side-step-phar">Step 2</div>
-    <h2 class="side-sub-header">Select plan</h2>
+<div class="step-info">
+
+  <div class="side-step-phar">Step 2</div>
+  <h2 class="side-sub-header">Select plan</h2>
+</div>
   </div>
   
   <div class="side-step">
     <div class="num">1</div>
-    <div class="side-step-phar">Step 3</div>
-    <h2 class="side-sub-header">Add-ons</h2>
+<div class="step-info">
+
+  <div class="side-step-phar">Step 3</div>
+  <h2 class="side-sub-header">Add-ons</h2>
+</div>
   </div>
   
   <div class="side-step">
     <div class="num">1</div>
-    <div class="side-step-phar">Step 4</div>
-    <h2 class="side-sub-header">Summary</h2>
+    <div class="step-info">
+
+      <div class="side-step-phar">Step 4</div>
+      <h2 class="side-sub-header">Summary</h2>
+    </div>
   </div>
   
 </nav>
@@ -51,19 +62,26 @@
     <!-- Step 1 start -->
     <section class="step step-1">
 
-      Personal info
-      Please provide your name, email address, and phone number.
+      <h2 class="sub-header">Personal info</h2>
+      <p class="phar">Please provide your name, email address, and phone number.</p>
+      <form action="" class="form">
+        <div class="form-body">
+          <div class="input-cont">
+            <label for="name" class="label">Name</label>
+            <input type="text" class="input name" placeholder="e.g. Stephen King">
+          </div>
+          <div class="input-cont">
+            <label for="email" class="label">Email Addres</label>
+            <input type="text" class="input email" placeholder="e.g. stephenking@lorem.com">
+          </div>
+          <div class="input-cont">
+            <label for="phone" class="label">Phone Number</label>
+            <input type="text" class="input name" placeholder="e.g. +1 234 567 890">
+          </div>
+        </div>
+        <button class="btn next">Next Step</button>
+      </form>
       
-      Name
-      e.g. Stephen King
-      
-      Email Address
-      e.g. stephenking@lorem.com
-      
-      Phone Number
-      e.g. +1 234 567 890
-      
-      Next Step
     </section>
     <!-- Step 1 end -->
     
