@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-<script src="main.js"></script>
+<script src="main.js" defer></script>
 </head>
 <body>
 <main class="main">
@@ -62,10 +62,10 @@
     <!-- Step 1 start -->
     <section class="step step-1">
 
-      <h2 class="sub-header">Personal info</h2>
-      <p class="phar">Please provide your name, email address, and phone number.</p>
-      <form action="" class="form">
+      <div class="form">
         <div class="form-body">
+      <h2 class="sub-header mb-16">Personal info</h2>
+      <p class="phar mb-32">Please provide your name, email address, and phone number.</p>
           <div class="input-cont">
             <label for="name" class="label">Name</label>
             <input type="text" class="input name" placeholder="e.g. Stephen King">
@@ -80,7 +80,7 @@
           </div>
         </div>
         <button class="btn next">Next Step</button>
-      </form>
+      </div>
       
     </section>
     <!-- Step 1 end -->
@@ -88,23 +88,43 @@
     <!-- Step 2 start -->
     <section class="step step-2">
       
-      Select your plan
-      You have the option of monthly or yearly billing.
-      
-      Arcade
-      $9/mo
-      
-      Advanced
-      $12/mo
-      
-      Pro
-      $15/mo
-      
-      Monthly
-      Yearly
-      
-      Go Back
-      Next Step
+      <div class="form">
+        <div class="form-body">
+      <h2 class="sub-header mb-16">Select your plan</h2>
+      <p class="phar">You have the option of monthly or yearly billing.</p>
+<div class="choose-cont">
+  
+            <div class="choose-card arcade">
+              <img src="assets/images/icon-arcade.svg" alt="" class="choose-img">
+              <h3 class="label">Arcade</h3>
+              <div class="choose-price">$<span class="choose-num">9</span>/<span class="choose-type">mo</span></div>
+            </div>
+            
+            <div class="choose-card advance">
+              <img src="assets/images/icon-advanced.svg" alt="" class="choose-img">
+              <h3 class="label">Advanced</h3>
+              <div class="choose-price">$<span class="choose-num">12</span>/<span class="choose-type">mo</span></div>
+            </div>
+            
+            <div class="choose-card pro">
+              <img src="assets/images/icon-pro.svg" alt="" class="choose-img">
+              <h3 class="label">Pro</h3>
+              <div class="choose-price">$<span class="choose-num">15</span>/<span class="choose-type">mo</span></div>
+            </div>
+</div>
+          <div class="toggle-cont">
+
+            <div class="phar choose-phar monthyl-phar">Monthly</div>
+            <div class="toggle"><div class="dot"></div></div>
+            <div class="phar choose-phar yearly-phar">Yearly</div>
+          </div>
+        </div>
+        <div class="btn-cont">
+
+          <button class="btn prev">Go Back</button>
+          <button class="btn next">Next Step</button>
+        </div>
+    </div>
     
     </section>
     <!-- Step 2 end -->
@@ -114,24 +134,47 @@
       <section class="step step-3">
         
         
-        Pick add-ons
-        Add-ons help enhance your gaming experience.
+        <div class="form">
+          <div class="form-body">
+        <h2 class="sub-header mb-16">Pick add-ons</h2>
+        <p class="phar">Add-ons help enhance your gaming experience.</p>
+          <div class="add-cont">
+
+            <div class="add-card">
+              <input type="checkbox" class="add-check">
+              <div class="add-body">
+                <h3 class="label">Online service</h3>
+                <p class="phar">Access to multiplayer games</p>
+              </div>
+              <div class="add-price">+$<span class="add-num">1</span>/<span class="add-type">mo</span></div>
+            </div>
+            
+            <div class="add-card">
+              <input type="checkbox" class="add-check">
+              <div class="add-body">
+                <h3 class="label">Larger storage</h3>
+                <p class="phar">Extra 1TB of cloud save</p>
+              </div>
+              <div class="add-price">+$<span class="add-num">2</span>/<span class="add-type">mo</span></div>
+            </div>
+            
+            <div class="add-card">
+              <input type="checkbox" class="add-check">
+              <div class="add-body">
+                <h3 class="label">Customizable Profile</h3>
+                <p class="phar">Custom theme on your profile</p>
+              </div>
+              <div class="add-price">+$<span class="add-num">2</span>/<span class="add-type">mo</span></div>
+            </div>
+          </div>
+        </div>
+          <div class="btn-cont">
+
+            <button class="btn prev">Go Back</button>
+            <button class="btn next">Next Step</button>
+          </div>
         
-        Online service
-        Access to multiplayer games
-        +$1/mo
-        
-        Larger storage
-        Extra 1TB of cloud save
-        +$2/mo
-        
-        Customizable Profile
-        Custom theme on your profile
-        +$2/mo
-        
-        Go Back
-        Next Step
-        
+      </div>
       </section>
       <!-- Step 3 end -->
       
@@ -139,28 +182,38 @@
       <section class="step step- 4">
         
       
-        Finishing up
-        Double-check everything looks OK before confirming.
-        
-        <!-- Dynamically add subscription and add-on selections here -->
-        
-      Total (per month/year)
-      
-      Go Back
-      Confirm
+        <div class="form">
+          <div class="form-body">
+        <h2 class="sub-header mb-16">Finishing up</h2>
+        <p class="phar">Double-check everything looks OK before confirming.</p>
+
+            <!-- Dynamically add subscription and add-on selections here -->
+            
+            Total (per month/year)
+          </div>
+          <div class="btn-cont">
+
+            <button class="btn prev">Go Back</button>
+            <button class="btn next">Confirm</button>
+          </div>
+        </div>
       
     </section>
     <!-- Step 4 end -->
     
     <!-- Step 5 start -->
     <section class="step step-5">
-      
-      
-      Thank you!
-      
-      Thanks for confirming your subscription! We hope you have fun 
-      using our platform. If you ever need support, please feel free 
-      to email us at support@loremgaming.com.
+      <div class="step-body">
+
+        <img src="assets/images/icon-thank-you.svg" alt="bi" class="thank-you-img">
+        <h2 class="sum-header mb-16">Thank you!</h2>
+        
+        <p class="phar">
+          Thanks for confirming your subscription! We hope you have fun
+          using our platform. If you ever need support, please feel free
+          to email us at support@loremgaming.com.
+        </p>
+      </div>
       
     </section>
     <!-- Step 5 end -->

@@ -50,8 +50,8 @@
   #root, #__next {
     isolation: isolate;
   }
-:root{
-  /* Primary */
+  :root{
+    /* Primary */
   --Marine-blue: hsl(213, 96%, 18%);
   --Marine-blue-footer: hsl(213, 96%, 4%);
   --Purplish-blue: hsl(243, 100%, 62%);
@@ -66,24 +66,39 @@
   --Alabaster: hsl(231, 100%, 99%);
   --White: hsl(0, 0%, 100%);
 }
-  .attribution { 
-    font-size: 16px; 
-    text-align: center;
-    padding: 24px;
-    background: var(--Marine-blue-footer);
-    color: white;
-   }
-  .attribution a { 
-    color: hsl(228, 45%, 44%);
-   }
-p{
-  font-size: 16px;
+.attribution { 
+  font-size: 16px; 
+  text-align: center;
+  padding: 24px;
+  background: var(--Marine-blue-footer);
+  color: white;
 }
-.phar{
-  font-size: 16px;
-  color: var(--Cool-gray);
-  font-weight: 400;
-}
+.attribution a { 
+  color: hsl(228, 45%, 44%);
+   }
+   p{
+     font-size: 16px;
+    }
+    .phar{
+      font-size: 16px;
+      color: var(--Cool-gray);
+      font-weight: 400;
+    }
+    .sub-header{
+      font-size: 32px;
+      line-height: 32px;
+      color: var(--Marine-blue);
+      font-weight: 700;
+    }
+    .mb-16{
+      margin-bottom: 16px;
+    }
+    .mb-24{
+      margin-bottom: 24px;
+    }
+    .mb-32{
+      margin-bottom: 32px;
+    }
 .step{
   display: none;
 }
@@ -102,6 +117,7 @@ p{
   padding: 18px;
   border-radius: 18px;
   box-shadow: 5px 5px 10px 0px hsla(231, 11%, 63%, .3);
+  margin: 40px 0;
 }
 /* Side */
 .side-nav{
@@ -132,13 +148,15 @@ p{
   font-weight: 500;
 }
 .side-sub-header{
-  font-size: 24px;
+  font-size: 18px;
+  text-transform: uppercase;
   color: var(--White);
-  line-height: 24px;
+  line-height: 18px;
   font-weight: 700;
 }
 .side-step-phar{
   color: var(--Pastel-blue);
+  text-transform: uppercase;
   font-weight: 400;
 }
 .side-step-active .num{
@@ -146,20 +164,30 @@ p{
   color: black;
 }
 /* Side */
-/* Step */
+/* Step 1 */
 .step{
-  padding: 32px 7vw 18px 7vw;
+  padding: 32px 5vw 18px 5vw;
+  width: 606.8px;
 }
-.sub-header{
-  font-size: 40px;
-  color: var(--Marine-blue);
-  font-weight: 700;
+.step-5{
+  place-items: center;
+}
+.step-body{
+  min-height: 518px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.thank-you-img{
+  margin-bottom : 40px;
 }
 .form{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 434px;
+  min-height: 518px;
 }
 .input-cont{
   margin-bottom: 24px;
@@ -183,6 +211,10 @@ p{
 .input:focus{
   border: 1px solid var(--Marine-blue);
 }
+.btn-cont{
+  display: flex;
+  justify-content: space-between;
+}
 .btn{
   border: none;
   outline-color: transparent;
@@ -196,7 +228,80 @@ p{
   margin-left: auto;
   color: var(--Alabaster);
 }
-/* Step */
+/* Step 1 */
+/* Step 2 */
+.choose-cont{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 40px;
+}
+.choose-card{
+  border: 1px solid var(--Light-gray);
+  border-radius: 6px;
+  padding: 24px;
+}
+.choose-img{
+  margin-bottom: 60px;
+}
+.choose-price{
+  color: var(--Cool-gray);
+}
+.toggle-cont{
+  display: flex;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 24px;
+}
+.toggle{
+  width: 60px;
+  height: 30px;
+  background: var(--Marine-blue);
+  border-radius: 15px;
+  padding: 5px;
+}
+.dot{
+  width: 20px;
+  height: 20px;
+  background: var(--Magnolia);
+  border-radius: 50%;
+}
+.toggle.yearly .dot{
+  position: relative;
+  left: 30px;
+}
+/* Step 2 */
+/* Step 3 */
+.add-cont{
+  margin-top: 40px;
+}
+.add-card{
+  display: grid;
+  grid-template-columns: 1fr 4.5fr 1fr;
+  margin-bottom: 16px;
+  border: 1px solid var(--Light-gray);
+  border-radius: 6px;
+  padding: 16px;
+  margin-top: 16px;
+  align-items: center;
+  justify-content: start;
+}
+.add-check{
+  width: 16px;
+  height: 16px;
+  border: none;
+  border: 1px solid var(--Light-gray);
+  outline-color: none;
+}
+.add-check:checked{
+  background: var(--Marine-blue);
+}
+.add-price{
+  color: var(--Cool-gray);
+}
+/* Step 3 */
 /* Extra large devices (large desktops, 1200px and up) */
 @media (width < 1200px) {}
 
