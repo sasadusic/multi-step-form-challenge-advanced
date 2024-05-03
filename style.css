@@ -241,6 +241,9 @@
   border-radius: 6px;
   padding: 24px;
 }
+.choose-card.choose-card-active{
+  border: 1px solid var(--Marine-blue);
+}
 .choose-img{
   margin-bottom: 60px;
 }
@@ -292,6 +295,7 @@
   width: 16px;
   height: 16px;
   border: none;
+  outline: none;
   border: 1px solid var(--Light-gray);
   outline-color: none;
 }
@@ -302,6 +306,27 @@
   color: var(--Cool-gray);
 }
 /* Step 3 */
+/* Step 4 */
+.choose-cont{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--Marine-blue);
+  font-weight: 500;
+  padding: 24px 0 24px 24px;
+  border-bottom: 1px solid var(--Light-gray);
+}
+.total-cont{
+  padding: 24px 0 24px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.total-num{
+  color: var(--Purplish-blue);
+  font-weight: 500;
+}
+/* Step 4 */
 /* Extra large devices (large desktops, 1200px and up) */
 @media (width < 1200px) {}
 
