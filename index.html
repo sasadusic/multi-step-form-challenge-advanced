@@ -67,16 +67,16 @@
       <h2 class="sub-header mb-16">Personal info</h2>
       <p class="phar mb-32">Please provide your name, email address, and phone number.</p>
           <div class="input-cont">
-            <label for="name" class="label">Name</label>
+            <label for="name" class="label">Name<span class="error">This field is required</span></label>
             <input type="text" class="input name" placeholder="e.g. Stephen King">
           </div>
           <div class="input-cont">
-            <label for="email" class="label">Email Addres</label>
+            <label for="email" class="label">Email Addres<span class="error">This field is required</span></label>
             <input type="text" class="input email" placeholder="e.g. stephenking@lorem.com">
           </div>
           <div class="input-cont">
-            <label for="phone" class="label">Phone Number</label>
-            <input type="text" class="input name" placeholder="e.g. +1 234 567 890">
+            <label for="phone" class="label">Phone Number<span class="error">This field is required</span></label>
+            <input type="text" class="input phone" placeholder="e.g. +1 234 567 890">
           </div>
         </div>
         <button class="btn next btn-step-1">Next Step</button>
@@ -190,6 +190,7 @@
               <div class="choose-left">Arcade(Yearly)</div>
               <div class="choose-right">$90/yr</div>
             </div>
+            <a href="#" class="phar change-phar">Change</a>
             <!-- Dynamically add subscription and add-on selections here -->
             
             <div class="total-cont"><p class="phar total-phar">Total (per <span class="total-type"></span>)</p><div class="p phar total-phar total-num"></div></div>

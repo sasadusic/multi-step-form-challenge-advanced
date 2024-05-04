@@ -2,17 +2,35 @@ const steps = document.querySelectorAll('.step')
 const prevs = document.querySelectorAll('.prev')
 const nexts = document.querySelectorAll('.next')
 const sideSteps = document.querySelectorAll('.side-step')
+const inputs = document.querySelectorAll('.input')
+const names = document.querySelector('.name')
+const email = document.querySelector('.email')
+const phone = document.querySelector('.phone')
 
 let stepIndex = 1
 let sideStepIndex = 1
 
 nexts.forEach(next => {
     next.onclick = () => {
-        if(next.classList.contains('btn-step-3')){
-            document.querySelector('.choose-left').innerHTML = `${data.chooseName}(${data.type})`
-            document.querySelector('.choose-right').innerHTML = `$${data.choose}/${data.typName}`
-            document.querySelector('.total-type').innerHTML = data.type
-            document.querySelector('.total-num').innerHTML = `+$${data.choose}/${data.typName}`
+        if(next.classList.contains('btn-step-1')){
+            inputs.forEach(input => {
+                if(input.value == ''){
+                    input.parentElement.classList.add('input-error')
+                }else{
+                    input.parentElement.classList.remove('input-error')
+                }
+            })
+        }
+        if(names.value == '' || email.value == '' || phone.value == ''){
+            console.log('error')
+        }
+        else{
+
+            if(next.classList.contains('btn-step-3')){
+                document.querySelector('.choose-left').innerHTML = `${data.chooseName}(${data.type})`
+                document.querySelector('.choose-right').innerHTML = `$${data.choose}/${data.typName}`
+                document.querySelector('.total-type').innerHTML = data.type
+                document.querySelector('.total-num').innerHTML = `+$${data.choose}/${data.typName}`
         }
         stepIndex++
         sideStepIndex++
@@ -29,6 +47,7 @@ nexts.forEach(next => {
         })
         document.querySelector(`.side-step-${sideStepIndex}`).classList.add('side-step-active')
     }
+}
 })
 
 prevs.forEach(prev => {
@@ -64,7 +83,7 @@ let data = {
     storage: 2,
     profile: 2,
     choose: 0,
-    chooseName: 'arcade'
+    chooseName: 'Arcade'
 }
 
 const chooseTypes = document.querySelectorAll('.choose-type')

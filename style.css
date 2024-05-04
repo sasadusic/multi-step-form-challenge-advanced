@@ -195,6 +195,17 @@
 .label{
   color: var(--Marine-blue);
   font-weight: 500;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.error{
+  color: var(--Strawberry-red);
+  display: none;
+}
+.input-error .error{
+  display: block;
 }
 .input{
   width: 100%;
@@ -204,6 +215,10 @@
   border: 1px solid var(--Light-gray);
   border-radius: 6px;
   margin-top: 8px;
+  cursor: pointer;
+}
+.input-error .input{
+  border: 1px solid var(--Strawberry-red);
 }
 .input::placeholder{
   color: var(--Cool-gray);
@@ -222,11 +237,22 @@
   padding: 12px 18px;
   width: max-content;
   border-radius: 4px;
+  cursor: pointer;
+  color: var(--Cool-gray);
+  background: transparent;
+  font-weight: 500;
 }
 .next{
   background: var(--Marine-blue);
   margin-left: auto;
   color: var(--Alabaster);
+}
+.next:hover{
+  background: var(--Purplish-blue);
+}
+.prev:hover{
+  color: var(--Marine-blue);
+  font-weight: 500;
 }
 /* Step 1 */
 /* Step 2 */
@@ -240,6 +266,11 @@
   border: 1px solid var(--Light-gray);
   border-radius: 6px;
   padding: 24px;
+  cursor: pointer;
+}
+.choose-card:hover{
+  border: 1px solid var(--Marine-blue);
+
 }
 .choose-card.choose-card-active{
   border: 1px solid var(--Marine-blue);
@@ -290,6 +321,10 @@
   margin-top: 16px;
   align-items: center;
   justify-content: start;
+  cursor: pointer;
+}
+.add-card:hover{
+  border: 1px solid var(--Marine-blue);
 }
 .add-check{
   width: 16px;
@@ -313,14 +348,23 @@
   justify-content: space-between;
   color: var(--Marine-blue);
   font-weight: 500;
-  padding: 24px 0 24px 24px;
+  padding: 24px 0 0 24px;
+}
+.change-phar{
   border-bottom: 1px solid var(--Light-gray);
+  padding: 0 0 0 24px;
+}
+.change-phar:hover{
+  color: var(--Marine-blue);
 }
 .total-cont{
   padding: 24px 0 24px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.choose-left{
+  text-transform: capitalize;
 }
 .total-num{
   color: var(--Purplish-blue);
