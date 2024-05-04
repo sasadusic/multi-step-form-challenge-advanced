@@ -79,9 +79,9 @@ let data = {
     advance: 12,
     pro: 15,
     typName: 'mo',
-    service: 1,
-    storage: 2,
-    profile: 2,
+    service: {value: 1, added: false},
+    storage: {value: 2, added: false},
+    profile: {value: 2, added: false},
     choose: 0,
     chooseName: 'Arcade'
 }
@@ -106,18 +106,18 @@ toggle.onclick = () => {
         data.advance = 120
         data.pro = 150
 
-        data.service = 10
-        data.storage = 20
-        data.profile = 20
+        data.service.value = 10
+        data.storage.value = 20
+        data.profile.value = 20
     }else{
         data.typName ='mo'
         data.arcade = 9
         data.advance = 12
         data.pro = 15
 
-        data.service = 1
-        data.storage = 2
-        data.profile = 2
+        data.service.value = 1
+        data.storage.value = 2
+        data.profile.value = 2
     }
     chooseTypes.forEach(chooseType => chooseType.innerText = data.typName)
     arcade.innerText = data.arcade
@@ -125,9 +125,9 @@ toggle.onclick = () => {
     pro.innerText = data.pro
 
     addType.forEach(addType => addType.innerText = data.typName)
-    service.innerText = data.service
-    storage.innerText = data.storage
-    provile.innerText = data.profile
+    service.innerText = data.service.value
+    storage.innerText = data.storage.value
+    provile.innerText = data.profile.value
 }
 
 // Choose
@@ -149,5 +149,14 @@ cards.forEach(card => {
     }
 })
 
-// Summary
-const btnStep3 = document.querySelector('.btn-step-3')
+// Adds
+const adds = document.querySelectorAll('.add-card')
+
+adds.forEach(add => {
+    add.onclick = () => {
+        const addType = add.dataset.add
+
+        data[addType].added = !data[addType].added
+        alert(`${data[addType].added}, ${data[addType].value}`)
+    }
+})
