@@ -6,6 +6,7 @@ const inputs = document.querySelectorAll('.input')
 const names = document.querySelector('.name')
 const email = document.querySelector('.email')
 const phone = document.querySelector('.phone')
+const addCont = document.querySelector('.adds-cont')
 
 let stepIndex = 1
 let sideStepIndex = 1
@@ -31,6 +32,20 @@ nexts.forEach(next => {
                 document.querySelector('.choose-right').innerHTML = `$${data.choose}/${data.typName}`
                 document.querySelector('.total-type').innerHTML = data.type
                 document.querySelector('.total-num').innerHTML = `+$${data.choose}/${data.typName}`
+        }
+        if(next.classList.contains('btn-step-3')){
+            for (const key in data.adds) {
+                if (data.adds.hasOwnProperty(key)) {
+                    const add = data.adds[key];
+                    if (add.added) {
+                        const p = document.createElement('p');
+                        p.innerText = add.text;
+                        p.className = 'phar';
+                        addCont.append(p);
+                    }
+                }
+            }
+            console.log('test')
         }
         stepIndex++
         sideStepIndex++
@@ -79,9 +94,11 @@ let data = {
     advance: 12,
     pro: 15,
     typName: 'mo',
-    service: {value: 1, added: false},
-    storage: {value: 2, added: false},
-    profile: {value: 2, added: false},
+    adds:{
+        service: {value: 1, added: false, text: 'Online services'},
+        storage: {value: 2, added: false, text: 'Larger storage'},
+        profile: {value: 2, added: false, text: 'Customizable profile'},
+    },
     choose: 0,
     chooseName: 'Arcade'
 }
@@ -94,7 +111,7 @@ const pro = document.querySelector('.pro-num')
 const addType = document.querySelectorAll('.add-type')
 const service = document.querySelector('.service-num')
 const storage = document.querySelector('.storage-num')
-const provile = document.querySelector('.provile-num')
+const profile = document.querySelector('.profile-num')
 
 
 toggle.onclick = () => {
@@ -106,18 +123,18 @@ toggle.onclick = () => {
         data.advance = 120
         data.pro = 150
 
-        data.service.value = 10
-        data.storage.value = 20
-        data.profile.value = 20
+        data.adds.service.value = 10
+        data.adds.storage.value = 20
+        data.adds.profile.value = 20
     }else{
         data.typName ='mo'
         data.arcade = 9
         data.advance = 12
         data.pro = 15
 
-        data.service.value = 1
-        data.storage.value = 2
-        data.profile.value = 2
+        data.adds.service.value = 1
+        data.adds.storage.value = 2
+        data.adds.profile.value = 2
     }
     chooseTypes.forEach(chooseType => chooseType.innerText = data.typName)
     arcade.innerText = data.arcade
@@ -125,9 +142,9 @@ toggle.onclick = () => {
     pro.innerText = data.pro
 
     addType.forEach(addType => addType.innerText = data.typName)
-    service.innerText = data.service.value
-    storage.innerText = data.storage.value
-    provile.innerText = data.profile.value
+    service.innerText = data.adds.service.value
+    storage.innerText = data.adds.storage.value
+    profile.innerText = data.adds.profile.value
 }
 
 // Choose
@@ -156,7 +173,11 @@ adds.forEach(add => {
     add.onclick = () => {
         const addType = add.dataset.add
 
-        data[addType].added = !data[addType].added
-        alert(`${data[addType].added}, ${data[addType].value}`)
+        data.adds[addType].added = !data.adds[addType].added
+        alert(`${data.adds[addType].added}, ${data.adds[addType].value}`)
+
+        if(add.classList.contains('add-added')){
+            add.classList.remove('add-added')
+        }else{add.classList.add('add-added')}
     }
 })

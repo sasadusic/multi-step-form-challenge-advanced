@@ -323,7 +323,7 @@
   justify-content: start;
   cursor: pointer;
 }
-.add-card:hover{
+.add-card:hover, .add-added{
   border: 1px solid var(--Marine-blue);
 }
 .add-check{
