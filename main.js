@@ -31,14 +31,15 @@ nexts.forEach(next => {
                 document.querySelector('.choose-left').innerHTML = `${data.chooseName}(${data.type})`
                 document.querySelector('.choose-right').innerHTML = `$${data.choose}/${data.typName}`
                 document.querySelector('.total-type').innerHTML = data.type
-                document.querySelector('.total-num').innerHTML = `+$${data.choose}/${data.typName}`
-        }
-        if(next.classList.contains('btn-step-3')){
+            }
+            if(next.classList.contains('btn-step-3')){
+            let count = data.choose
             addCont.innerHTML = ''
             for (const key in data.adds) {
                 if (data.adds.hasOwnProperty(key)) {
                     const add = data.adds[key];
                     if (add.added) {
+                        count += add.value
                         const p = document.createElement('p');
                         p.innerHTML = `${add.text}<span class='add-span'>+$${add.value}/${data.typName}</span>`
                         p.className = 'phar';
@@ -48,6 +49,8 @@ nexts.forEach(next => {
                 }
             }
             console.log('test')
+            document.querySelector('.total-num').innerHTML = `+$${count}/${data.typName}`
+            // alert(count)
         }
         stepIndex++
         sideStepIndex++
