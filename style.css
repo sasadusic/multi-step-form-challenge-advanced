@@ -352,13 +352,13 @@
 }
 .change-phar{
   border-bottom: 1px solid var(--Light-gray);
-  padding: 0 0 0 24px;
+  padding: 0 0 24px 24px;
 }
 .change-phar:hover{
   color: var(--Marine-blue);
 }
 .total-cont{
-  padding: 24px 0 24px 24px;
+  padding: 0 0 0 024px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -368,6 +368,19 @@
 }
 .total-num{
   color: var(--Purplish-blue);
+  font-weight: 500;
+}
+.adds-cont{
+  padding: 6px 0 40px 0;
+}
+.add-phar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 0 6px 24px; 
+}
+.add-phae .add-span{
+  color: black;
   font-weight: 500;
 }
 /* Step 4 */

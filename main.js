@@ -34,13 +34,15 @@ nexts.forEach(next => {
                 document.querySelector('.total-num').innerHTML = `+$${data.choose}/${data.typName}`
         }
         if(next.classList.contains('btn-step-3')){
+            addCont.innerHTML = ''
             for (const key in data.adds) {
                 if (data.adds.hasOwnProperty(key)) {
                     const add = data.adds[key];
                     if (add.added) {
                         const p = document.createElement('p');
-                        p.innerText = add.text;
+                        p.innerHTML = `${add.text}<span class='add-span'>+$${add.value}/${data.typName}</span>`
                         p.className = 'phar';
+                        p.classList.add('add-phar')
                         addCont.append(p);
                     }
                 }
@@ -174,7 +176,7 @@ adds.forEach(add => {
         const addType = add.dataset.add
 
         data.adds[addType].added = !data.adds[addType].added
-        alert(`${data.adds[addType].added}, ${data.adds[addType].value}`)
+        // alert(`${data.adds[addType].added}, ${data.adds[addType].value}`)
 
         if(add.classList.contains('add-added')){
             add.classList.remove('add-added')
