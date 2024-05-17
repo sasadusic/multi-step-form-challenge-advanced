@@ -415,7 +415,8 @@
     display: none;
   }
   .hero{
-    position: relative;
+    /* position: relative; */
+    /* position: absolute; */
     top: -100px;
     width: 90%;
     margin: 18px;
