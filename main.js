@@ -181,8 +181,14 @@ adds.forEach(add => {
         data.adds[addType].added = !data.adds[addType].added
         // alert(`${data.adds[addType].added}, ${data.adds[addType].value}`)
 
+        checkbox = document.querySelector(`.add-check-${add.dataset.add}`)
+        checkbox.checked = data.adds[addType].added
+
         if(add.classList.contains('add-added')){
             add.classList.remove('add-added')
-        }else{add.classList.add('add-added')}
+        }
+        else{
+            add.classList.add('add-added')
+        }
     }
 })
